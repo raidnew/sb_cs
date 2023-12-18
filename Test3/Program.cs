@@ -32,26 +32,9 @@ namespace Test3
         {
             Program testPerson = new Program();
             testPerson.completeTestData();
-            testPerson.delayedOutput();
-        }
-
-        public void delayedOutput()
-        {
-            Console.Write($"Fullname: {this.fullName}{crbr}");
+            Console.Write(testPerson.toString());
             Console.ReadKey();
-            Console.Write($"Age: {this.age}{crbr}");
-            Console.ReadKey();
-            Console.Write($"Email: {this.email}{crbr}");
-            Console.ReadKey();
-            Console.Write($"Score:{crbr}");
-            Console.ReadKey();
-            Console.Write($"  Programming: {this.scoreProgramming}{crbr}");
-            Console.ReadKey();
-            Console.Write($"  Mathematics: {this.scoreMathemetics}{crbr}");
-            Console.ReadKey();
-            Console.Write($"  Phisics: {this.scorePhisics}{crbr}");
-            Console.ReadKey();
-            Console.Write($"  Average: {this.getScoreAverage()}");
+            Console.Write($"  Average score: {testPerson.getScoreAverage()}");
             Console.ReadKey();
         }
 
@@ -63,8 +46,7 @@ namespace Test3
                    $"Score:{crbr}" +
                    $"  Programming: {this.scoreProgramming}{crbr}" +
                    $"  Mathematics: {this.scoreMathemetics}{crbr}" +
-                   $"  Phisics: {this.scorePhisics}{crbr}" +
-                   $"  Average: {this.getScoreAverage()}";
+                   $"  Phisics: {this.scorePhisics}{crbr}";
         }
     }
 }
